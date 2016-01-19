@@ -1,15 +1,7 @@
 #! /usr/bin/env python3
-#arrayManipulation.py includes functions for manipulating list of lists (arrays)
+#arrayManipulation.py includes functions for manipulating lists
 
-def transpondArray(inputArray):
-	transArray = [[]]
-	for i in range(len(inputArray)):
-		for j in range(len(inputArray[i])):
-			transArray[j][i] = inputArray[i][j]
-	return transArray
+arr1 = [1, 2, 3]
+arr2 = [4, 5 ,6]
 
-testArray = [['a', 'b', 'c'] , [1 , 2 , 3] , ['t1', 't2', 't3'], ['z1', 'z2', 'z3']]
-
-print(testArray)
-
-print(transpondArray(testArray))
+print (list(zip(arr1, arr2)))
