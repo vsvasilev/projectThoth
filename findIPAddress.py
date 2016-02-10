@@ -17,7 +17,12 @@ def isIPAddress(ipAddr):
 
 message = 'The workstation has IP address 192.255.4.19'
 
-ipAddrRegex = re.compile(r'(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})')
+ipAddrRegex = re.compile(r'''
+	(\d{1,3})\. 				# First octed
+	(\d{1,3})\. 				# Second octet
+	(\d{1,3})\. 				# Third octet
+	(\d{1,3})					# Fourth octet
+	''', re.X)
 
 if isIPAddress(ipAddrRegex.search(message).groups()):
 	print ('.'.join(list(ipAddrRegex.search(message).groups())))
