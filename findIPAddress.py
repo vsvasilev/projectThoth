@@ -20,10 +20,10 @@ message = '1.1.1.1 is IPv4 address and 2001:0db8:0000:0000:0000:ff00:0042:8329 i
          \nThe workstation has IP address 192.255.4.19 and the server 10.255.1.7'
 
 ipv4AddrRegex = re.compile(r'''
-	(^\d{1,3}|\s\d{1,3})\. 				# First octed
-	(\d{1,3})\. 						# Second octet
-	(\d{1,3})\. 						# Third octet
-	(\d{1,3}\s?)						# Fourth octet
+	(^\d{1,3}|\s\d{1,3})\. 					# First octed
+	(\d{1,3})\. 							# Second octet
+	(\d{1,3})\. 							# Third octet
+	(\d{1,3}\s?)							# Fourth octet
 	''', re.X | re.M)
 
 ipv6AddrRegex = re.compile(r'''
@@ -34,7 +34,7 @@ ipv6AddrRegex = re.compile(r'''
 	([0-9a-f]{,4})::?						# Fifth 16 bit group
 	([0-9a-f]{,4})::?						# Sixth 16 bit group
 	([0-9a-f]{,4})::?						# Seventh 16 bit group
-	([0-9a-f]{,4})						# Eigth 16 bit group	
+	([0-9a-f]{,4})							# Eigth 16 bit group	
 	''', re.X | re.M)
 
 ipv4Addresses = []
